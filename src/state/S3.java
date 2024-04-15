@@ -4,13 +4,13 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S3 extends State {
-    public S3(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S3(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Cancel() {
-        this.op.cancelMsg();
+        this.m.op.cancelMsg();
         this.m.changeState(0);
     }
 
@@ -20,13 +20,13 @@ public class S3 extends State {
             System.out.println("[Error] Invalid selection. please select again!");
         }
         else{
-            this.op.setPrice(g);
+            this.m.op.setPrice(g);
         }
     }
 
     @Override
     public void StartPump() {
-        this.op.setInitialValues();
+        this.m.op.setInitialValues();
         System.out.println("[System] Now start gas pump...");
         this.m.changeState(4);
     }

@@ -4,16 +4,15 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S0 extends State {
-
-    public S0(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S0(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Start() {
         this.m.changeState(1);
         System.out.println("[System] Welcome to CS586 gas station!");
-        this.op.payMsg();
+        this.m.op.payMsg();
     }
 
     // Below functions are placeholders.

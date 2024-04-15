@@ -5,14 +5,14 @@ import model.MDA_EFSM;
 
 public class SInit extends State {
 
-    public SInit(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public SInit(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Activate() {
         this.m.changeState(0);
-        this.op.storePrices();
+        this.m.op.storePrices();
     }
 
     // Below functions are placeholders.

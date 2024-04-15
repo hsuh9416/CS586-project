@@ -4,17 +4,17 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S1 extends State {
-    public S1(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S1(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void PayType(int t) {
         if (t == 0){ // Payment: cash
             this.m.changeState(3);
-            this.op.storeCash();
-            this.op.displayMenu();
-            this.op.setPayType(0);
+            this.m.op.storeCash();
+            this.m.op.displayMenu();
+            this.m.op.setPayType(0);
 
         }
         else if(t == 1){

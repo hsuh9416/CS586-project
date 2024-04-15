@@ -4,23 +4,23 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S2 extends State {
-    public S2(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S2(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Reject() {
-        this.op.rejectMsg();
-        this.op.ejectCard();
+        this.m.op.rejectMsg();
+        this.m.op.ejectCard();
         this.m.changeState(0);
     }
 
     @Override
     public void Approved() {
         System.out.println("[System] Verification successful!");
-        this.op.setPayType(1);
-        this.op.ejectCard();
-        this.op.displayMenu();
+        this.m.op.setPayType(1);
+        this.m.op.ejectCard();
+        this.m.op.displayMenu();
         this.m.changeState(3);
     }
 

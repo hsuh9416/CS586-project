@@ -1,20 +1,23 @@
 package model;
 import abstractFactory.GasPumpFactory;
 import state.*;
+import processor.Output.Output;
 
 public class MDA_EFSM {
     State s;
     State[] sl;
+    public Output op;
 
     public MDA_EFSM(GasPumpFactory gpf) {
+        op = new Output(gpf);
         sl = new State[7];
-        this.sl[0] = new S0(this, gpf);
-        this.sl[1] = new S1(this, gpf);
-        this.sl[2] = new S2(this, gpf);
-        this.sl[3] = new S3(this, gpf);
-        this.sl[4] = new S4(this, gpf);
-        this.sl[5] = new S5(this, gpf);
-        this.sl[6] = new SInit(this, gpf);
+        this.sl[0] = new S0(this);
+        this.sl[1] = new S1(this);
+        this.sl[2] = new S2(this);
+        this.sl[3] = new S3(this);
+        this.sl[4] = new S4(this);
+        this.sl[5] = new S5(this);
+        this.sl[6] = new SInit(this);
         this.s = this.sl[6]; // set initial state as SInit.
     }
 

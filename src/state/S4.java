@@ -4,14 +4,14 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S4 extends State {
-    public S4(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S4(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Pump() {
-        this.op.pumpGasUnit();
-        this.op.gasPumpedMsg();
+        this.m.op.pumpGasUnit();
+        this.m.op.gasPumpedMsg();
     }
 
     @Override

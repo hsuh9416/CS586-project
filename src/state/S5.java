@@ -4,20 +4,20 @@ import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S5 extends State {
-    public S5(MDA_EFSM m, GasPumpFactory gpf) {
-        super(m, gpf);
+    public S5(MDA_EFSM m) {
+        super(m);
     }
 
     @Override
     public void Receipt() {
-        this.op.printReceipt();
-        this.op.returnCash();
+        this.m.op.printReceipt();
+        this.m.op.returnCash();
         this.m.changeState(0);
     }
 
     @Override
     public void NoReceipt() {
-        this.op.returnCash();
+        this.m.op.returnCash();
         this.m.changeState(0);
     }
 

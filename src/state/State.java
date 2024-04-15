@@ -6,11 +6,9 @@ import processor.Output.Output;
 
 public abstract class State {
     MDA_EFSM m;
-    Output op;
 
-    public State(MDA_EFSM m, GasPumpFactory gpf){
+    public State(MDA_EFSM m){
         this.m = m;
-        this.op = new Output(gpf);
     }
 
     abstract public void Activate();
