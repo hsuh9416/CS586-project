@@ -1,6 +1,5 @@
 package state;
 
-import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class S2 extends State {

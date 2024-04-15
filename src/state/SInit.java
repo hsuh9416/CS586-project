@@ -1,6 +1,5 @@
 package state;
 
-import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
 
 public class SInit extends State {

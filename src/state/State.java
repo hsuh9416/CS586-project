@@ -1,8 +1,6 @@
 package state;
 
-import abstractFactory.GasPumpFactory;
 import model.MDA_EFSM;
-import processor.Output.Output;
 
 public abstract class State {
     MDA_EFSM m;
