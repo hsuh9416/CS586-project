@@ -24,9 +24,7 @@ public class S3 extends State {
     }
 
     @Override
-    public void StartPump() {
-        this.m.op.setInitialValues();
-        System.out.println("[System] Now start gas pump...");
+    public void Continue() {
         this.m.changeState(4);
     }
 
@@ -55,6 +53,11 @@ public class S3 extends State {
 
     @Override
     public void Approved() {
+        System.out.println("[Error] Wrong Assessment!");
+    }
+
+    @Override
+    public void StartPump() {
         System.out.println("[Error] Wrong Assessment!");
     }
 

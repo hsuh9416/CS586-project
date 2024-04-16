@@ -10,15 +10,16 @@ public class MDA_EFSM {
 
     public MDA_EFSM(GasPumpFactory gpf) {
         op = new Output(gpf);
-        sl = new State[7];
+        sl = new State[8];
         this.sl[0] = new S0(this);
         this.sl[1] = new S1(this);
         this.sl[2] = new S2(this);
         this.sl[3] = new S3(this);
         this.sl[4] = new S4(this);
         this.sl[5] = new S5(this);
-        this.sl[6] = new SInit(this);
-        this.s = this.sl[6]; // set initial state as SInit.
+        this.sl[6] = new S6(this);
+        this.sl[7] = new SInit(this);
+        this.s = this.sl[7]; // set initial state as SInit.
     }
 
     public void changeState(int state){
@@ -71,4 +72,6 @@ public class MDA_EFSM {
     public void NoReceipt() {
         this.s.NoReceipt();
     }
+
+    public void Continue(){this.s.Continue();}
 }

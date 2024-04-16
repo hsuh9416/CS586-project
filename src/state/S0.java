@@ -70,4 +70,9 @@ public class S0 extends State {
     public void NoReceipt() {
         System.out.println("[Error] Wrong Assessment!");
     }
+
+    @Override
+    public void Continue() {
+        System.out.println("[Error] Wrong Assessment!");
+    }
 }

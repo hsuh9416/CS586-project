@@ -41,14 +41,17 @@ public class GasPump2 {
 
     public void Regular(){
         this.m.SelectGas(0);
+        this.m.Continue();
     }
 
     public void Premium(){
         this.m.SelectGas(1);
+        this.m.Continue();
     }
 
     public void Diesel(){
         this.m.SelectGas(2);
+        this.m.Continue();
     }
 
     public void StartPump(){

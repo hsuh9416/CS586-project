@@ -51,6 +51,7 @@ public class GasPump1 {
     }
 
     public void StartPump(){
+        this.m.Continue();
         this.m.StartPump();
     }
 

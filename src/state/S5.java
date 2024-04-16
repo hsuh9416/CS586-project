@@ -8,16 +8,15 @@ public class S5 extends State {
     }
 
     @Override
-    public void Receipt() {
-        this.m.op.printReceipt();
-        this.m.op.returnCash();
-        this.m.changeState(0);
+    public void Pump() {
+        this.m.op.pumpGasUnit();
+        this.m.op.gasPumpedMsg();
     }
 
     @Override
-    public void NoReceipt() {
-        this.m.op.returnCash();
-        this.m.changeState(0);
+    public void StopPump() {
+        System.out.println("[System] The pumping service is terminated.");
+        this.m.changeState(6);
     }
 
     // Below functions are placeholders.
@@ -34,7 +33,7 @@ public class S5 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[System] The service has already terminated.");
+        System.out.println("[Error] The service is already in progress. No modification available.");
     }
 
     @Override
@@ -44,7 +43,7 @@ public class S5 extends State {
 
     @Override
     public void Cancel() {
-        System.out.println("[System] The service has already terminated.");
+        System.out.println("[Error] The service is already in progress. No modification available.");
     }
 
     @Override
@@ -54,21 +53,26 @@ public class S5 extends State {
 
     @Override
     public void StartPump() {
-        System.out.println("[System] The service has already terminated.");
-    }
-
-    @Override
-    public void Pump() {
-        System.out.println("[System] The service has already terminated.");
-    }
-
-    @Override
-    public void StopPump() {
-        System.out.println("[System] The service has already terminated.");
+        System.out.println("[Error] The service is already in progress!");
     }
 
     @Override
     public void SelectGas(int g) {
-        System.out.println("[System] The service has already terminated.");
+        System.out.println("[Error] The service is already in progress. No modification available.");
+    }
+
+    @Override
+    public void Receipt() {
+        System.out.println("[Error] Wrong Assessment!");
+    }
+
+    @Override
+    public void NoReceipt() {
+        System.out.println("[Error] Wrong Assessment!");
+    }
+
+    @Override
+    public void Continue() {
+        System.out.println("[Error] The service is already in progress!");
     }
 }

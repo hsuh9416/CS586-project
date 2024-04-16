@@ -21,4 +21,5 @@ public abstract class State {
     abstract public void SelectGas(int g);  // Regular: g=0; Premium: g=1; Diesel: g=2;
     abstract public void Receipt();
     abstract public void NoReceipt();
+    abstract public void Continue();
 }

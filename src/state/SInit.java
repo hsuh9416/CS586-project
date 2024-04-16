@@ -70,4 +70,9 @@ public class SInit extends State {
     public void NoReceipt() {
         System.out.println("[Error] Not activated!");
     }
+
+    @Override
+    public void Continue() {
+        System.out.println("[Error] Not activated!");
+    }
 }

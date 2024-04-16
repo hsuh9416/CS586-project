@@ -8,14 +8,9 @@ public class S4 extends State {
     }
 
     @Override
-    public void Pump() {
-        this.m.op.pumpGasUnit();
-        this.m.op.gasPumpedMsg();
-    }
-
-    @Override
-    public void StopPump() {
-        System.out.println("[System] The pumping service is terminated.");
+    public void StartPump() {
+        this.m.op.setInitialValues();
+        System.out.println("[System] Now start gas pump...");
         this.m.changeState(5);
     }
 
@@ -33,7 +28,8 @@ public class S4 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[Error] The service is already in progress. No modification available.");
+        System.out.println("[Error] Your payment type has already been set.");
+        System.out.println("[Error] Please restart if you want to use another payment type!");
     }
 
     @Override
@@ -52,11 +48,15 @@ public class S4 extends State {
     }
 
     @Override
-    public void StartPump() {
-        System.out.println("[Error] The service is already in progress!");
+    public void Pump() {
+        System.out.println("[Error] Wrong Assessment!");
     }
 
     @Override
+    public void StopPump() {
+        System.out.println("[Error] Wrong Assessment!");
+    }
+
     public void SelectGas(int g) {
         System.out.println("[Error] The service is already in progress. No modification available.");
     }
@@ -69,5 +69,10 @@ public class S4 extends State {
     @Override
     public void NoReceipt() {
         System.out.println("[Error] Wrong Assessment!");
+    }
+
+    @Override
+    public void Continue() {
+        System.out.println("It's already started!");
     }
 }
