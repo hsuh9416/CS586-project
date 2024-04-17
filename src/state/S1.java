@@ -11,9 +11,9 @@ public class S1 extends State {
     public void PayType(int t) {
         if (t == 0){ // Payment: cash
             this.m.changeState(3);
-            this.m.op.storeCash();
-            this.m.op.displayMenu();
-            this.m.op.setPayType(0);
+            this.m.op.StoreCash();
+            this.m.op.DisplayMenu();
+            this.m.op.SetPayType(0);
 
         }
         else if(t == 1){

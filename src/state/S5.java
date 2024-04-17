@@ -9,8 +9,8 @@ public class S5 extends State {
 
     @Override
     public void Pump() {
-        this.m.op.pumpGasUnit();
-        this.m.op.gasPumpedMsg();
+        this.m.op.PumpGasUnit();
+        this.m.op.GasPumpedMsg();
     }
 
     @Override

@@ -9,46 +9,46 @@ public class Output {
         this.gpf = gpf;
     }
 
-    public void storePrices(){      // Meta-Action 1
+    public void StorePrices(){      // Meta-Action 1
         this.gpf.createStorePrices().storePrices();
     }
-    public void payMsg(){
+    public void PayMsg(){
         this.gpf.createPayMsg().payMsg();
     }
-    public void storeCash(){
+    public void StoreCash(){
         this.gpf.createStoreCash().storeCash();
     }
-    public void displayMenu(){
+    public void DisplayMenu(){
         this.gpf.createDisplayMenu().displayMenu();
     }
-    public void rejectMsg(){
+    public void RejectMsg(){
         this.gpf.createRejectMsg().rejectMsg();
     }
-    public void setPrice(int g){
+    public void SetPrice(int g){
         this.gpf.createSetPrice().setPrice(g);
     }
-    public void setInitialValues(){
+    public void SetInitialValues(){
         this.gpf.createSetInitialValues().setInitialValues();
     }
-    public void pumpGasUnit(){
+    public void PumpGasUnit(){
         this.gpf.createPumpGasUnit().pumpGasUnit();
     }
-    public void gasPumpedMsg(){
+    public void GasPumpedMsg(){
         this.gpf.createGasPumpedMsg().gasPumpedMsg();
     }
-    public void printReceipt(){
+    public void PrintReceipt(){
         this.gpf.createPrintReceipt().printReceipt();
     }
-    public void cancelMsg(){
+    public void CancelMsg(){
         this.gpf.createCancelMsg().cancelMsg();
     }
-    public void returnCash(){
+    public void ReturnCash(){
         this.gpf.createReturnCash().returnCash();
     }
-    public void setPayType(int t){
+    public void SetPayType(int t){
         this.gpf.createSetPayType().setPayType(t);
     }
-    public void ejectCard(){
+    public void EjectCard(){
         this.gpf.createEjectCard().ejectCard();
     }
 }

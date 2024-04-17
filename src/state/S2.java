@@ -9,17 +9,17 @@ public class S2 extends State {
 
     @Override
     public void Reject() {
-        this.m.op.rejectMsg();
-        this.m.op.ejectCard();
+        this.m.op.RejectMsg();
+        this.m.op.EjectCard();
         this.m.changeState(0);
     }
 
     @Override
     public void Approved() {
         System.out.println("[System] Verification successful!");
-        this.m.op.setPayType(1);
-        this.m.op.ejectCard();
-        this.m.op.displayMenu();
+        this.m.op.SetPayType(1);
+        this.m.op.EjectCard();
+        this.m.op.DisplayMenu();
         this.m.changeState(3);
     }
 

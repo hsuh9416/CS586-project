@@ -11,7 +11,7 @@ public class SInit extends State {
     @Override
     public void Activate() {
         this.m.changeState(0);
-        this.m.op.storePrices();
+        this.m.op.StorePrices();
     }
 
     // Below functions are placeholders.

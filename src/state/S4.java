@@ -9,7 +9,7 @@ public class S4 extends State {
 
     @Override
     public void StartPump() {
-        this.m.op.setInitialValues();
+        this.m.op.SetInitialValues();
         System.out.println("[System] Now start gas pump...");
         this.m.changeState(5);
     }

@@ -11,7 +11,7 @@ public class S0 extends State {
     public void Start() {
         this.m.changeState(1);
         System.out.println("[System] Welcome to CS586 gas station!");
-        this.m.op.payMsg();
+        this.m.op.PayMsg();
     }
 
     // Below functions are placeholders.

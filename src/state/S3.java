@@ -9,7 +9,7 @@ public class S3 extends State {
 
     @Override
     public void Cancel() {
-        this.m.op.cancelMsg();
+        this.m.op.CancelMsg();
         this.m.changeState(0);
     }
 
@@ -19,7 +19,7 @@ public class S3 extends State {
             System.out.println("[Error] Invalid selection. please select again!");
         }
         else{
-            this.m.op.setPrice(g);
+            this.m.op.SetPrice(g);
         }
     }
 

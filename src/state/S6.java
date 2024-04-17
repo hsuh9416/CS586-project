@@ -9,14 +9,14 @@ public class S6 extends State {
 
     @Override
     public void Receipt() {
-        this.m.op.printReceipt();
-        this.m.op.returnCash();
+        this.m.op.PrintReceipt();
+        this.m.op.ReturnCash();
         this.m.changeState(0);
     }
 
     @Override
     public void NoReceipt() {
-        this.m.op.returnCash();
+        this.m.op.ReturnCash();
         this.m.changeState(0);
     }
 

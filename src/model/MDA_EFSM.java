@@ -33,6 +33,7 @@ public class MDA_EFSM {
     public void Start() {
         this.s.Start();
     }
+
     public void PayType(int t) {
         this.s.PayType(t);
     }
