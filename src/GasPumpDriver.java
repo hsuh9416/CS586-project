@@ -4,13 +4,16 @@ import java.util.Scanner;
 
 public class GasPumpDriver {
     Scanner sc;
+    GasPump1 gp1;
+    GasPump2 gp2;
 
     public GasPumpDriver(){
         this.sc = new Scanner(System.in);
+        this.gp1 = new GasPump1();
+        this.gp2 = new GasPump2();
     }
 
     public void runGasPump1(){
-        GasPump1 gp = new GasPump1();
         int sel;
         while(true){
             System.out.println("[System] Please select the operations from below.");
@@ -31,45 +34,45 @@ public class GasPumpDriver {
                     System.out.println("\tOperation: Activate(int a)");
                     System.out.print("[System] Enter the value of price a: ");
                     int a = sc.nextInt();
-                    gp.Activate(a);
+                    gp1.Activate(a);
                     break;
                 case 1:
                     System.out.println("\tOperation: Start()");
-                    gp.Start();
+                    gp1.Start();
                     break;
                 case 2:
                     System.out.println("\tOperation: PayCredit()");
-                    gp.PayCredit();
+                    gp1.PayCredit();
                     break;
                 case 3:
                     System.out.println("\tOperation: Reject()");
-                    gp.Reject();
+                    gp1.Reject();
                     break;
                 case 4:
                     System.out.println("\tOperation: Cancel()");
-                    gp.Cancel();
+                    gp1.Cancel();
                     break;
                 case 5:
                     System.out.println("\tOperation: Approved()");
-                    gp.Approved();
+                    gp1.Approved();
                     break;
                 case 6:
                     System.out.println("\tOperation: PayCash(int c)");
                     System.out.print("[System] Enter the value of payment c: ");
                     int c = sc.nextInt();
-                    gp.PayCash(c);
+                    gp1.PayCash(c);
                     break;
                 case 7:
                     System.out.println("\tOperation: StartPump()");
-                    gp.StartPump();
+                    gp1.StartPump();
                     break;
                 case 8:
                     System.out.println("\tOperation: Pump()");
-                    gp.Pump();
+                    gp1.Pump();
                     break;
                 case 9:
                     System.out.println("\tOperation: StopPump()");
-                    gp.StopPump();
+                    gp1.StopPump();
                     break;
                 default:
                     System.out.println("[Error] Invalid selection. please select again!");
@@ -82,7 +85,6 @@ public class GasPumpDriver {
     }
 
     public void runGasPump2(){
-        GasPump2 gp = new GasPump2();
         int sel;
         while(true){
             System.out.println("[System] Please select the operations from below.");
@@ -107,53 +109,53 @@ public class GasPumpDriver {
                 float b = sc.nextFloat();
                 System.out.print("[System] Enter the value of price c: ");
                 float c = sc.nextFloat();
-                gp.Activate(a, b, c);
+                gp2.Activate(a, b, c);
                 break;
             case 1:
                 System.out.println("\tOperation: Start()");
-                gp.Start();
+                gp2.Start();
                 break;
             case 2:
                 System.out.println("\tOperation: PayCash(c)");
                 System.out.print("[System] Enter the value of cash payment c: ");
                 int cash = sc.nextInt();
-                gp.PayCash(cash);
+                gp2.PayCash(cash);
                 break;
             case 3:
                 System.out.println("\tOperation: Cancel()");
-                gp.Cancel();
+                gp2.Cancel();
                 break;
             case 4:
                 System.out.println("\tOperation: Premium()");
-                gp.Premium();
+                gp2.Premium();
                 break;
             case 5:
                 System.out.println("\tOperation: Regular()");
-                gp.Regular();
+                gp2.Regular();
                 break;
             case 6:
                 System.out.println("\tOperation: Diesel()");
-                gp.Diesel();
+                gp2.Diesel();
                 break;
             case 7:
                 System.out.println("\tOperation: StartPump()");
-                gp.StartPump();
+                gp2.StartPump();
                 break;
             case 8:
                 System.out.println("\tOperation: PumpGallon()");
-                gp.PumpGallon();
+                gp2.PumpGallon();
                 break;
             case 9:
                 System.out.println("\tOperation: Stop()");
-                gp.Stop();
+                gp2.Stop();
                 break;
             case 10:
                 System.out.println("\tOperation: Receipt()");
-                gp.Receipt();
+                gp2.Receipt();
                 break;
             case 11:
                 System.out.println("\tOperation: NoReceipt()");
-                gp.NoReceipt();
+                gp2.NoReceipt();
                 break;
             default:
                 System.out.println("[Error] Invalid selection. please select again!");
@@ -208,5 +210,9 @@ public class GasPumpDriver {
 
         if(picked == 0) runGasPump1();
         else runGasPump2();
+    }
+
+    public static void main(String[] args) {
+        new GasPumpDriver().run();
     }
 }
