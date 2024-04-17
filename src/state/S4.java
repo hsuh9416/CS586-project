@@ -9,9 +9,9 @@ public class S4 extends State {
 
     @Override
     public void StartPump() {
-        this.m.op.SetInitialValues();
-        System.out.println("[System] Now start gas pump...");
         this.m.changeState(5);
+        this.m.op.SetInitialValues();
+        System.out.println("[System] Now start gas pumping...");
     }
 
     // Below functions are placeholders.
@@ -28,51 +28,50 @@ public class S4 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[Error] Your payment type has already been set.");
-        System.out.println("[Error] Please restart if you want to use another payment type!");
-    }
-
-    @Override
-    public void Reject() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been set. No modification available!");
     }
 
     @Override
     public void Cancel() {
-        System.out.println("[Error] The service is already in progress. No modification available.");
+        System.out.println("[Error] The service is already in progress. No modification available!");
+    }
+
+    @Override
+    public void Reject() {
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
     public void Approved() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
     public void Pump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Pumping is not started!");
     }
 
     @Override
     public void StopPump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Pumping is not started!");
     }
 
     public void SelectGas(int g) {
-        System.out.println("[Error] The service is already in progress. No modification available.");
+        System.out.println("[Error] The service is already in progress. No modification available!");
     }
 
     @Override
     public void Receipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Pumping is not started!");
     }
 
     @Override
     public void NoReceipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Pumping is not started!");
     }
 
     @Override
     public void Continue() {
-        System.out.println("It's already started!");
+        System.out.println("[Error] The service is already in progress!");
     }
 }

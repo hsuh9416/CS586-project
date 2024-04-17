@@ -9,18 +9,13 @@ public class S3 extends State {
 
     @Override
     public void Cancel() {
-        this.m.op.CancelMsg();
         this.m.changeState(0);
+        this.m.op.CancelMsg();
     }
 
     @Override
     public void SelectGas(int g) {
-        if (g < 0 || g > 2){
-            System.out.println("[Error] Invalid selection. please select again!");
-        }
-        else{
-            this.m.op.SetPrice(g);
-        }
+        this.m.op.SetPrice(g);
     }
 
     @Override
@@ -42,42 +37,41 @@ public class S3 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[Error] Your payment type has already been set.");
-        System.out.println("[Error] Please restart if you want to use another payment type!");
+        System.out.println("[Error] Your payment type has already been set!");
     }
 
     @Override
     public void Reject() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
     public void Approved() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
     public void StartPump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Gas pump is not ready!");
     }
 
     @Override
     public void Pump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Gas pump is not ready!");
     }
 
     @Override
     public void StopPump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Gas pump is not ready!");
     }
 
     @Override
     public void Receipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error]Gas pump is not ready!");
     }
 
     @Override
     public void NoReceipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Gas pump is not ready!");
     }
 }

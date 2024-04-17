@@ -15,7 +15,6 @@ public class S5 extends State {
 
     @Override
     public void StopPump() {
-        System.out.println("[System] The pumping service is terminated.");
         this.m.changeState(6);
     }
 
@@ -33,22 +32,22 @@ public class S5 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[Error] The service is already in progress. No modification available.");
-    }
-
-    @Override
-    public void Reject() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been set. No modification available!");
     }
 
     @Override
     public void Cancel() {
-        System.out.println("[Error] The service is already in progress. No modification available.");
+        System.out.println("[Error] The service is already in progress. No modification available!");
+    }
+
+    @Override
+    public void Reject() {
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
     public void Approved() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Your payment type has already been verified!");
     }
 
     @Override
@@ -58,17 +57,17 @@ public class S5 extends State {
 
     @Override
     public void SelectGas(int g) {
-        System.out.println("[Error] The service is already in progress. No modification available.");
+        System.out.println("[Error] The service is already in progress. No modification available!");
     }
 
     @Override
     public void Receipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] The service is currently in progress!");
     }
 
     @Override
     public void NoReceipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] The service is currently in progress!");
     }
 
     @Override

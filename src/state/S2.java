@@ -9,18 +9,19 @@ public class S2 extends State {
 
     @Override
     public void Reject() {
+        this.m.changeState(0);
         this.m.op.RejectMsg();
         this.m.op.EjectCard();
-        this.m.changeState(0);
     }
 
     @Override
     public void Approved() {
+        this.m.changeState(3);
         System.out.println("[System] Verification successful!");
         this.m.op.SetPayType(1);
         this.m.op.EjectCard();
         this.m.op.DisplayMenu();
-        this.m.changeState(3);
+
     }
 
     // Below functions are placeholders.
@@ -37,46 +38,46 @@ public class S2 extends State {
 
     @Override
     public void PayType(int t) {
-        System.out.println("[Error] Payment verification is currently processing!");
+        System.out.println("[Error] Payment type is already set!");
     }
 
     @Override
     public void Cancel() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void StartPump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void Pump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void StopPump() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void SelectGas(int g) {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void Receipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void NoReceipt() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 
     @Override
     public void Continue() {
-        System.out.println("[Error] Wrong Assessment!");
+        System.out.println("[Error] Please wait for the payment verification!");
     }
 }
