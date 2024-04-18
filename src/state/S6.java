@@ -1,23 +1,24 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S6 extends State {
-    public S6(MDA_EFSM m) {
-        super(m);
+    public S6(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Receipt() {
         this.m.changeState(0);
-        this.m.op.PrintReceipt();
-        this.m.op.ReturnCash();
+        this.op.PrintReceipt();
+        this.op.ReturnCash();
     }
 
     @Override
     public void NoReceipt() {
         this.m.changeState(0);
-        this.m.op.ReturnCash();
+        this.op.ReturnCash();
     }
 
     // Below functions are placeholders.

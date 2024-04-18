@@ -1,17 +1,18 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class SInit extends State {
 
-    public SInit(MDA_EFSM m) {
-        super(m);
+    public SInit(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Activate() {
         this.m.changeState(0);
-        this.m.op.StorePrices();
+        this.op.StorePrices();
     }
 
     // Below functions are placeholders.

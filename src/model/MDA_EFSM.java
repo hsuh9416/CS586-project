@@ -6,19 +6,18 @@ import processor.Output.Output;
 public class MDA_EFSM {
     State s;
     State[] sl;
-    public Output op;
 
     public MDA_EFSM(GasPumpFactory gpf) {
-        op = new Output(gpf);
+        Output op = new Output(gpf);
         sl = new State[8];
-        this.sl[0] = new S0(this);
-        this.sl[1] = new S1(this);
-        this.sl[2] = new S2(this);
-        this.sl[3] = new S3(this);
-        this.sl[4] = new S4(this);
-        this.sl[5] = new S5(this);
-        this.sl[6] = new S6(this);
-        this.sl[7] = new SInit(this);
+        this.sl[0] = new S0(this, op);
+        this.sl[1] = new S1(this, op);
+        this.sl[2] = new S2(this, op);
+        this.sl[3] = new S3(this, op);
+        this.sl[4] = new S4(this, op);
+        this.sl[5] = new S5(this, op);
+        this.sl[6] = new S6(this, op);
+        this.sl[7] = new SInit(this, op);
         this.s = this.sl[7]; // set initial state as SInit.
     }
 
