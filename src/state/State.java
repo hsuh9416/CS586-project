@@ -1,12 +1,15 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public abstract class State {
     MDA_EFSM m;
+    Output op;
 
-    public State(MDA_EFSM m){
+    public State(MDA_EFSM m, Output op){
         this.m = m;
+        this.op = op;
     }
 
     abstract public void Activate();

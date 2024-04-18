@@ -1,16 +1,17 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S4 extends State {
-    public S4(MDA_EFSM m) {
-        super(m);
+    public S4(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void StartPump() {
         this.m.changeState(5);
-        this.m.op.SetInitialValues();
+        this.op.SetInitialValues();
         System.out.println("[System] Now start gas pumping...");
     }
 

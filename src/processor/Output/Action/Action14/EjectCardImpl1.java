@@ -2,8 +2,8 @@ package processor.Output.Action.Action14;
 
 import dataStore.DataStore;
 
-public class EjectCardImpl extends EjectCard {
-    public EjectCardImpl(DataStore ds) {
+public class EjectCardImpl1 extends EjectCard {
+    public EjectCardImpl1(DataStore ds) {
         super(ds);
     }
 

@@ -2,8 +2,8 @@ package processor.Output.Action.Action6;
 
 import dataStore.*;
 
-public class SetPriceImpl extends SetPrice {
-    public SetPriceImpl(DataStore ds) {
+public class SetPriceImpl2 extends SetPrice {
+    public SetPriceImpl2(DataStore ds) {
         super(ds);
     }
 

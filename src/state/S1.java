@@ -1,19 +1,20 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S1 extends State {
-    public S1(MDA_EFSM m) {
-        super(m);
+    public S1(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void PayType(int t) {
         if (t == 0){ // Payment: cash
             this.m.changeState(3);
-            this.m.op.StoreCash();
-            this.m.op.DisplayMenu();
-            this.m.op.SetPayType(0);
+            this.op.StoreCash();
+            this.op.DisplayMenu();
+            this.op.SetPayType(0);
 
         }
         else if(t == 1){

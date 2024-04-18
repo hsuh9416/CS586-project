@@ -2,8 +2,8 @@ package processor.Output.Action.Action5;
 
 import dataStore.DataStore;
 
-public class RejectMsgImpl extends RejectMsg {
-    public RejectMsgImpl(DataStore ds) {
+public class RejectMsgImpl1 extends RejectMsg {
+    public RejectMsgImpl1(DataStore ds) {
         super(ds);
     }
 

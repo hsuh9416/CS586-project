@@ -1,21 +1,22 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S3 extends State {
-    public S3(MDA_EFSM m) {
-        super(m);
+    public S3(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Cancel() {
         this.m.changeState(0);
-        this.m.op.CancelMsg();
+        this.op.CancelMsg();
     }
 
     @Override
     public void SelectGas(int g) {
-        this.m.op.SetPrice(g);
+        this.op.SetPrice(g);
     }
 
     @Override

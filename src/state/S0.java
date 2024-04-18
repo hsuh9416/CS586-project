@@ -1,17 +1,18 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S0 extends State {
-    public S0(MDA_EFSM m) {
-        super(m);
+    public S0(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Start() {
         this.m.changeState(1);
         System.out.println("[System] Welcome to CS586 gas station!");
-        this.m.op.PayMsg();
+        this.op.PayMsg();
     }
 
     // Below functions are placeholders.

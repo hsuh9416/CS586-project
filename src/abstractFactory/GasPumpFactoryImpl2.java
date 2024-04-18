@@ -43,12 +43,12 @@ public class GasPumpFactoryImpl2 extends GasPumpFactory {
 
     @Override
     public RejectMsg createRejectMsg() { // Not used in GasPump2
-        return null;
+        return new RejectMsgImpl2(ds);
     }
 
     @Override
     public SetPrice createSetPrice() {
-        return new SetPriceImpl(ds);
+        return new SetPriceImpl2(ds);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class GasPumpFactoryImpl2 extends GasPumpFactory {
 
     @Override
     public CancelMsg createCancelMsg() {
-        return new CancelMsgImpl(ds);
+        return new CancelMsgImpl2(ds);
     }
 
     @Override
@@ -88,6 +88,6 @@ public class GasPumpFactoryImpl2 extends GasPumpFactory {
 
     @Override
     public EjectCard createEjectCard() {  // Not used in GasPump2
-        return null;
+        return new EjectCardImpl2(ds);
     }
 }

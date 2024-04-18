@@ -1,16 +1,17 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S5 extends State {
-    public S5(MDA_EFSM m) {
-        super(m);
+    public S5(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Pump() {
-        this.m.op.PumpGasUnit();
-        this.m.op.GasPumpedMsg();
+        this.op.PumpGasUnit();
+        this.op.GasPumpedMsg();
     }
 
     @Override

@@ -1,26 +1,27 @@
 package state;
 
 import model.MDA_EFSM;
+import processor.Output.Output;
 
 public class S2 extends State {
-    public S2(MDA_EFSM m) {
-        super(m);
+    public S2(MDA_EFSM m, Output op) {
+        super(m, op);
     }
 
     @Override
     public void Reject() {
         this.m.changeState(0);
-        this.m.op.RejectMsg();
-        this.m.op.EjectCard();
+        this.op.RejectMsg();
+        this.op.EjectCard();
     }
 
     @Override
     public void Approved() {
         this.m.changeState(3);
         System.out.println("[System] Verification successful!");
-        this.m.op.SetPayType(1);
-        this.m.op.EjectCard();
-        this.m.op.DisplayMenu();
+        this.op.SetPayType(1);
+        this.op.EjectCard();
+        this.op.DisplayMenu();
 
     }
 
