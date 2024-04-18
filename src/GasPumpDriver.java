@@ -9,12 +9,11 @@ public class GasPumpDriver {
 
     public GasPumpDriver(){
         this.sc = new Scanner(System.in);
-        this.gp1 = new GasPump1();
-        this.gp2 = new GasPump2();
     }
 
     public void runGasPump1(){
         int sel;
+        this.gp1 = new GasPump1();
         while(true){
             System.out.println("[System] Please select the operations from below.");
             System.out.println("---------------------------------------------------------------------");
@@ -85,6 +84,7 @@ public class GasPumpDriver {
     }
 
     public void runGasPump2(){
+        this.gp2 = new GasPump2();
         int sel;
         while(true){
             System.out.println("[System] Please select the operations from below.");
